@@ -25,7 +25,7 @@ The source of truth is `ghostword/docs/play/privacy-policy.html` in the app repo
 
 ## Releasing the APK
 
-`download/index.html` is a fallback in case GhostWord isn't live on Google Play in time. Its button points at `releases/latest/download/ghostword.apk`, so it only works once a release exists. Use the Signed, universal APK from Play Console (the uploaded bundle's Downloads tab) if you can, because it carries the same signature as Play installs.
+`download/index.html` is a fallback in case GhostWord isn't live on Google Play in time. Its button points at `releases/latest/download/ghostword.apk`, so it only works once a release exists. Use an APK signed with GhostWord's upload key, built from the same code as bundle 109. Don't use the Signed, universal APK from Play Console: Play added automatic protection to bundle 109 (an installer check, recorded in the app repo's runbook on 2026-10-22), and Google says a protected app that wasn't installed from Google Play prompts the user to get it from Google Play instead. Before the Play listing is live, that's a dead end. This hasn't been tested on a phone. Because the upload key and Play's app signing key differ, anyone who installs this APK has to uninstall it before installing from Play, as the page says.
 
 1. Create a GitHub Release on this repo and attach the APK with the asset name exactly `ghostword.apk`.
 2. Fill both SHA-256 placeholders in `download/index.html`: the file's hash and the signing certificate's hash (the HTML comment above them says how).
