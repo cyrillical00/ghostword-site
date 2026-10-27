@@ -74,7 +74,7 @@
 <h1>GhostWord Privacy Policy</h1>
 
 <div class="meta">
-  <p><strong>Effective date:</strong> 2026-10-21</p>
+  <p><strong>Effective date:</strong> 2026-10-27</p>
   <p><strong>App:</strong> GhostWord for Android (app ID <code>dev.auxon.ghostword</code>)</p>
   <p><strong>This page:</strong> https://cyrillical00.github.io/ghostword-site/privacy/</p>
   <p><strong>Contact:</strong> <a href="mailto:ghostword@auxon.dev">ghostword@auxon.dev</a></p>
@@ -92,7 +92,7 @@
 <p>GhostWord saves a few things in its private storage area on your phone:</p>
 <ul>
   <li><strong>Your sessions.</strong> For each session: the question you typed (if you typed one), when it started and ended, how long it ran, the word list and word speed it used, every word that appeared and when, and how you marked each word.</li>
-  <li><strong>Your settings.</strong> The word interval, your default word list, your voice settings, and whether you've finished the intro.</li>
+  <li><strong>Your settings.</strong> The word interval, your default word list, your voice settings, whether "Stir with motion sensors" is on, and whether you've finished the intro.</li>
   <li><strong>A signing key.</strong> The first time it needs one, GhostWord makes a random key and keeps it in Android's secure storage. The app uses it to sign a record of each finished session. The key stays on your phone and isn't backed up.</li>
 </ul>
 <p>The question you type stays in your session record on your phone. GhostWord never sends it anywhere. If Android backup is on, it's backed up with the rest of your history (see Backups).</p>
@@ -102,12 +102,17 @@
   <li>It doesn't send data to us, to a server or to any third party on its own. The app's own code makes no network requests. The only thing GhostWord hands to another app is what you choose to share (see Sharing your picks).</li>
   <li>It has no account or sign-in, no ads, no analytics and no crash-reporting tools.</li>
   <li>It doesn't use your location, microphone, camera, contacts, photos or files.</li>
+  <li>It doesn't save or send the motion and compass readings it mixes into the word draw (see Motion and compass sensors).</li>
   <li>It doesn't track you across apps or websites.</li>
 </ul>
 
 <h2>Spoken words</h2>
 <p>GhostWord reads each new word aloud with your phone's built-in text-to-speech engine. It hands the engine only the word, never your question or your ratings.</p>
 <p>You choose the voice engine in Android's text-to-speech settings. That engine belongs to your phone's maker or to the engine's developer, not to us. Some engines can use online voices. If yours does, the engine handles the word under its own privacy policy. To keep speech on your phone, pick an offline voice in your text-to-speech settings, or switch off "Speak words aloud" in GhostWord's settings.</p>
+
+<h2>Motion and compass sensors</h2>
+<p>Starting with version 1.1, GhostWord can read your phone's accelerometer (its motion sensor) and magnetometer (its compass sensor) while a session runs on screen. It mixes each reading into the random draw that picks the next word, then drops it. Every word stays equally likely, so the readings never make a word more or less likely, and they never bring a word sooner or later.</p>
+<p>GhostWord keeps the mix only in your phone's memory and drops it when the session screen closes. It never saves the readings, never writes them to a log and never sends them anywhere. Reading these sensors needs no Android permission. The sensors stop when you pause, leave the app or end the session. "Stir with motion sensors" is on unless you switch it off in GhostWord's settings. With it off, GhostWord opens no sensor at all.</p>
 
 <h2>Backups</h2>
 <p>If Android backup is on, Android may copy GhostWord's history and settings to your Google account, and restore them when you set up a new phone or move them straight to a new one. Android and Google handle that under Google's own privacy policy. GhostWord never sees it. The signing key isn't included, so a restored phone makes a new one. You can turn backup off or delete backups in your phone's Google and system settings.</p>
